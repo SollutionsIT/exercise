@@ -24,7 +24,8 @@ test.describe('Login', () => {
 
     await allure.step('Submit invalid credentials and see an error', async () => {
       await loginPage.login('wrong@example.com', 'badpass');
-      await expect(loginPage.errorMessage).toContainText('Invalid');
+      await expect(loginPage.errorMessage).toBeVisible();
+      await expect(loginPage.errorMessage).toHaveText('Invalid email or password');
     });
   });
 

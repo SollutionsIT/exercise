@@ -6,6 +6,7 @@ export class ProfileMenu {
     this.viewProfileLink = page.locator('a', { hasText: 'View Profile' });
     this.editProfileLink = page.locator('a', { hasText: 'Edit Profile' });
     this.photosLink = page.locator('a', { hasText: 'Photos' });
+    this.outsideArea = page.locator('#siteFooter');
   }
 
   async open() {
@@ -13,6 +14,6 @@ export class ProfileMenu {
   }
 
   async close() {
-    await this.page.click('body');
+    await this.outsideArea.click();
   }
 }
