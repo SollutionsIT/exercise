@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo Dating Co.</title>
+</head>
+<body>
+  <section id="loginView">
+    <h1>Members Login</h1>
+    <label for="form-login-email">Email</label>
+    <input id="form-login-email" type="email" />
+    <label for="form-login-password">Password</label>
+    <input id="form-login-password" type="password" />
+    <button id="login-submit" type="submit">Log In</button>
+    <p class="error" id="login-error" hidden>Invalid email or password</p>
+  </section>
+
+  <section id="homeView" hidden>
+    <nav>
+      <button id="profileMenuButton">My Profile &#9662;</button>
+      <div id="profileMenuDropdown" hidden>
+        <a href="#/profile/showprofile">View Profile</a>
+        <a href="#/profilemanagement/editmyprofile">Edit Profile</a>
+        <a href="#/profilemanagement/editprofilephotos">Photos</a>
+      </div>
+    </nav>
+    <main>
+      <h2 id="panelTitle">Home</h2>
+    </main>
+  </section>
+
+  <footer id="siteFooter">
+    <p>&copy; Demo Dating Co.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

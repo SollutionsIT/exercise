@@ -1,0 +1,16 @@
+{
+  "name": "aqa-interview-task",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "app": "node app/server.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "allure-js-commons": "^3.4.2",
+    "allure-playwright": "^3.4.2"
+  }
+}
