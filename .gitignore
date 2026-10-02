@@ -10,3 +10,8 @@
 /dataSources.local.xml
 /.idea
 /node_modules
+/node_modules/
+/test-results/
+/allure-results/
+/playwright-report/
+/.DS_Store

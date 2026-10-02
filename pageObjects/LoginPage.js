@@ -7,7 +7,7 @@ export class LoginPage {
     this.emailInput = page.locator('#form-login-email');
     this.passwordInput = page.locator('#form-login-password');
     this.submitButton = page.locator('#login-submit');
-    this.errorMessage = page.locator('p');
+    this.errorMessage = page.locator('#login-error');
   }
 
   async goTo() {
@@ -23,11 +23,11 @@ export class LoginPage {
 
   async loginAndExpectSuccess(email, password) {
     await this.login(email, password);
-    expect(this.page.url()).toMatch(/\/home/);
+    await expect(this.page).toHaveURL(/#\/home$/);
   }
 
   async loginAndExpectFailure(email, password) {
     await this.login(email, password);
-    expect(this.page.url()).toMatch(/\/auth\/login/);
+    await expect(this.page).toHaveURL(/#\/auth\/login\?error=401$/);
   }
 }

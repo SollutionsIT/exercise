@@ -18,8 +18,7 @@ test.describe('Profile menu', () => {
 
     await allure.step('Clicking outside closes the dropdown', async () => {
       await menu.close();
-      const itemCount = await authorizedPage.locator('#profileMenuDropdown a').count();
-      expect(itemCount).toBeGreaterThanOrEqual(0);
+      await expect(menu.dropdown).toBeHidden();
     });
   });
 });
